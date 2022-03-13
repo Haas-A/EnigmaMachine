@@ -26,7 +26,6 @@ class Scrambler():
         for line in lines:
             scrambledLine = ""
             for letter in line:
-                print(letter)
                 if letter in self.alphabet:
                     index = self.alphabet.index(letter)
                     scrambledLine = scrambledLine + self.key[index]

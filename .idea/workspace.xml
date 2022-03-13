@@ -22,7 +22,6 @@
     <list default="true" id="b049528b-9142-4c44-a830-913af7f1d42f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plugboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scrambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrambler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
