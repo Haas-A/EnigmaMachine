@@ -26,5 +26,4 @@ class Plugboard():
                     switchedLine = switchedLine + letter
             switchedMessage = switchedMessage + switchedLine
         return switchedMessage
-    #class here
-#yo
+
