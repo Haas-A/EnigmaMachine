@@ -46,6 +46,10 @@ class Scrambler():
                     unScrambledLine = unScrambledLine + letter
             unScrambledLines = unScrambledLines + unScrambledLine
         return unScrambledLines
+
+    def rotate(self):
+        self.key = self.key[1:25] + self.key[0]
+
 #ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 

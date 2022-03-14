@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b049528b-9142-4c44-a830-913af7f1d42f" name="Default Changelist" comment="" />
+    <list default="true" id="b049528b-9142-4c44-a830-913af7f1d42f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/message.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrambler.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -93,5 +99,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="487" y="8" key="#Main/0.0.1536.824/3840.-421.1920.1040/-1920.-419.1920.1040@0.0.1536.824" timestamp="1647179721186" />
+    <state x="279" y="58" key="SettingsEditor" timestamp="1647277331304">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="279" y="58" key="SettingsEditor/0.0.1536.824/3840.-421.1920.1040/-1920.-419.1920.1040@0.0.1536.824" timestamp="1647277331304" />
   </component>
 </project>
