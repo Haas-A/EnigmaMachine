@@ -55,14 +55,13 @@ class ScramblerContainer:
             for letter in line:
                 #TODO
                 #Adjust the following code to decrypt, rather than encrypt.
-
-                isLetter, scrambledLetter = self.first.scramble(letter)
+                isLetter, scrambledLetter = self.third.unscramble(letter)
                 if isLetter == 1:
                     firstRotationCounter = firstRotationCounter + 1
-                    self.first.rotate()
-                    isLetter, scrambledLetter = self.second.scramble(scrambledLetter)
-                    isLetter, scrambledLetter = self.third.scramble(scrambledLetter)
+                    isLetter, scrambledLetter = self.second.unscramble(scrambledLetter)
+                    isLetter, scrambledLetter = self.first.unscramble(scrambledLetter)
                     self.scrambledMessage = self.scrambledMessage + scrambledLetter
+                    self.first.rotate()
                 if firstRotationCounter == 26:
                     self.second.rotate()
                     firstRotationCounter = 0

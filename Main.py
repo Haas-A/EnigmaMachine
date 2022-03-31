@@ -24,7 +24,9 @@ def fileAutoDecrypt():
     diskThree = Scrambler(diskThreeSetting)
     container = ScramblerContainer
     container.setScramblers(container, diskOne, diskTwo, diskThree)
-
+    container.decrypt(container, file.readlines())
+    print(container.scrambledMessage)
+    container.printMessage(container)
 
 def oldSchool():
     x = 5
@@ -59,8 +61,8 @@ if type == 1:
     fileAutoEncrypt()
 elif type == 2:
     fileAutoDecrypt()
-elif type == 3:
-    oldSchool()
+# elif type == 3:
+#     oldSchool()
 else:
     print("here")
     x=5

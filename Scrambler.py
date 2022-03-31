@@ -29,21 +29,28 @@ class Scrambler():
             index = self.alphabet.index(letter)
         return result, self.key[index]
 
-    def unscramble(self, lines):
+    def unscramble(self, letter):
         #TODO
         #Remake the unscramble method to unscramble the message one letter at a time.
+        result = 0
+        index = 0
+        if letter in self.alphabet:
+            result = 1
+            index = self.key.index(letter)
+        return result, self.alphabet[index]
 
-        unScrambledLines = ""
-        for line in lines:
-            unScrambledLine = ""
-            for letter in line:
-                if letter in self.key:
-                    index = self.key.index(letter)
-                    unScrambledLine = unScrambledLine + self.alphabet[index]
-                else:
-                    unScrambledLine = unScrambledLine + letter
-            unScrambledLines = unScrambledLines + unScrambledLine
-        return unScrambledLines
+
+        # unScrambledLines = ""
+        # for line in lines:
+        #     unScrambledLine = ""
+        #     for letter in line:
+        #         if letter in self.key:
+        #             index = self.key.index(letter)
+        #             unScrambledLine = unScrambledLine + self.alphabet[index]
+        #         else:
+        #             unScrambledLine = unScrambledLine + letter
+        #     unScrambledLines = unScrambledLines + unScrambledLine
+        # return unScrambledLines
 
     def rotate(self):
         self.key = self.key[1:25] + self.key[0]
