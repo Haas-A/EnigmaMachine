@@ -21,20 +21,18 @@ class Scrambler():
         elif selectedScramblerSetting == 3:
             self.key = self.settingThree
 
-    def scramble(self, lines):
-        scrambledLines = ""
-        for line in lines:
-            scrambledLine = ""
-            for letter in line:
-                if letter in self.alphabet:
-                    index = self.alphabet.index(letter)
-                    scrambledLine = scrambledLine + self.key[index]
-                else:
-                    scrambledLine = scrambledLine + letter
-            scrambledLines = scrambledLines + scrambledLine
-        return scrambledLines
+    def scramble(self, letter):
+        result = 0
+        index = 0
+        if letter in self.alphabet:
+            result = 1
+            index = self.alphabet.index(letter)
+        return result, self.key[index]
 
     def unscramble(self, lines):
+        #TODO
+        #Remake the unscramble method to unscramble the message one letter at a time.
+
         unScrambledLines = ""
         for line in lines:
             unScrambledLine = ""

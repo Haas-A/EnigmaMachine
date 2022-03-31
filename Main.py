@@ -1,10 +1,35 @@
 #Main Methods of the Enigma Machine
 from Plugboard import Plugboard
 from Scrambler import Scrambler
+from ScramblerContainer import ScramblerContainer
 # import Scrambler
 
+#NOTE: Sample Message currently must be entirely caps letters. Non Caps letters characters will be ignored.
+
+def fileAutoDecrypt():
+    filename = input("Enter the filename of the message to decrypt (file.txt):\n")
+    file = open(filename, "r")
+    plugs = int(input("How many plugboard switches would you like to use?\n"))
+    switchLetters = []
+    while plugs > 0:
+        pair = input("Enter two letters to switch in the plugboard (AB):\n")
+        switchLetters.append(pair)
+        plugs = plugs - 1
+    board = Plugboard(switchLetters)
+    diskOneSetting = int(input("Which disk would you like to use for disk 1 (1-3):\n"))
+    diskTwoSetting = int(input("Which disk would you like to use for disk 2 (1-3):\n"))
+    diskThreeSetting = int(input("Which disk would you like to use for disk 3 (1-3):\n"))
+    diskOne = Scrambler(diskOneSetting)
+    diskTwo = Scrambler(diskTwoSetting)
+    diskThree = Scrambler(diskThreeSetting)
+    container = ScramblerContainer
+    container.setScramblers(container, diskOne, diskTwo, diskThree)
+
+
+def oldSchool():
+    x = 5
+
 def fileAutoEncrypt():
-    print("in function")
     filename = input("Enter the filename of the message to encrypt (file.txt):\n")
     file = open(filename, "r")
     plugs = int(input("How many plugboard switches would you like to use?\n"))
@@ -20,16 +45,11 @@ def fileAutoEncrypt():
     diskOne = Scrambler(diskOneSetting)
     diskTwo = Scrambler(diskTwoSetting)
     diskThree = Scrambler(diskThreeSetting)
-    lines = file.readlines()
-    linesUpper = []
-    for eachLine in lines:
-        linesUpper.append(eachLine.upper())
-    encryptedMessage = board.switch(linesUpper)
-    encryptedMessage = diskOne.scramble(encryptedMessage)
-    encryptedMessage = diskTwo.scramble(encryptedMessage)
-    encryptedMessage = diskThree.scramble(encryptedMessage)
-    print(encryptedMessage)
-    #TODO: Add the reflector here after creating a reflector class and object
+    container = ScramblerContainer
+    container.setScramblers(container, diskOne, diskTwo, diskThree)
+    container.type(container, file.readlines())
+    print(container.scrambledMessage)
+    container.printMessage(container)
     return
 
 print("Select an Enigma method:")
@@ -48,11 +68,7 @@ else:
 
 
 
-def fileAutoDecrypt():
-    x = 5
 
-def oldSchool():
-    x = 5
 
 #Prints to test the functionality of the different parts of the program
 # switchLetters = ["AB", "CD"]
